@@ -46,6 +46,7 @@ def main():
     print(f"Patient: {name}")
     print(f"Status: {status}")
     print(f"Temperature: {temp_status}")
+    print("Patient registration system.")
 
 # Menjalankan program utama
 if __name__ == "__main__":
