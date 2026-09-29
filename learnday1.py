@@ -32,6 +32,11 @@ def main():
     # 3. Input Nama (Tidak perlu try-except karena teks selalu valid)
     name = input("Enter patient name: ")
 
+    # added validation feature
+    if not name:
+        print("invalid name.")
+        return
+
     # 4. Memproses data menggunakan fungsi yang diminta
     status = check_patient_status(age)
     temp_status = check_temperature(temperature)
