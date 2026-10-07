@@ -45,3 +45,13 @@ for patient in patients:
         status
     )
 
+    # Latiha filter data
+    if status == "Fever":
+        print(
+            patient["name"],
+            "-",
+            status
+        )
+
+
+
