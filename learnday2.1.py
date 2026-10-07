@@ -32,6 +32,9 @@ patients = [
     },
 ]
 
+# tambah data
+fever_patients = []
+
 # For
 for patient in patients:
     age = check_patient_status(patient["age"])
@@ -46,12 +49,32 @@ for patient in patients:
     )
 
     # Latiha filter data
-    if status == "Fever":
+    if age == "Adult" and status == "Fever":
+        # data di masukan ke list koson
+        fever_patients.append(patient["name"])
+
         print(
             patient["name"],
             "-",
-            status
+            status,
+            "-",
+            age
         )
+
+# prin hasil tambah data
+print(fever_patients)
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
