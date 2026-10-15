@@ -10,11 +10,25 @@ def check_temperature(temperature):
     return "Normal"
 
 # Data
-patient = {
+patients = [
+{
     "name" : "Maria",
     "age" : 26,
     "temperature" : 38.5
+}, {
+    "name" : "John",
+    "age" : 17,
+    "temperature" : 36.5
+}, {
+    "name" : "Ana",
+    "age" : 32,
+    "temperature" : 37.2
+},{
+    "name" : "David",
+    "age" : 19,
+    "temperature" : 39.5
 }
+]
 
 def create_patient_summary(patient):
     # Ambil nama pasient
@@ -24,4 +38,7 @@ def create_patient_summary(patient):
 
     return f"{name} is {age_status} and has {temperature_check}."
 
-print(create_patient_summary(patient))
+for patient in patients:
+    summary = create_patient_summary(patient)
+    print(summary)
+
