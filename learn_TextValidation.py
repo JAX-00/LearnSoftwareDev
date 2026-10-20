@@ -1,8 +1,5 @@
-# function check age
-def check_patient_status(age):
-    if age >= 18:
-        return "Adult"
-    return "Child"
+# function check age take from other file
+from learn3 import check_patient_status
 
 # Validation check use Try and Except
 try:
@@ -10,7 +7,7 @@ try:
 
     # validasi nilai input
     if age < 0:
-        print("Age connot be negative")
+        print("Age cannot be negative")
     else:
         print(check_patient_status(age))
 
