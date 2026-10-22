@@ -1,14 +1,11 @@
-def add(*args):
-    print(args[1])
+from patient_utils import check_patient_status, check_temperature
 
-    sum = 0
-    for n in args:
-        sum += n
-    return sum
+patient = {
+    "name" : "maria",
+    "age" : check_patient_status(26),
+    "temperature" : check_temperature(38.5)
+}
 
-print(add(3,5,6,2,1,7,4,3))
-
-def calculate(**kwargs):
-    print(kwargs)
-
-claculate(add=3, multiply=5)
+print("Name :", patient["name"])
+print("Age Status :", patient["age"])
+print("Temperature Status:", patient["temperature"])
