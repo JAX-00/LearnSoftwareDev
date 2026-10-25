@@ -7,3 +7,5 @@ def check_temperature(temperature):
     if temperature >= 37.5:
         return "Fever"
     return "Normal"
+
+

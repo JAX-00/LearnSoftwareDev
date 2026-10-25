@@ -2,10 +2,14 @@ from patient_utils import check_patient_status, check_temperature
 
 patient = {
     "name" : "maria",
-    "age" : check_patient_status(26),
-    "temperature" : check_temperature(38.5)
+    "age" : 26,
+    "temperature" : 38.5
 }
 
-print("Name :", patient["name"])
-print("Age Status :", patient["age"])
-print("Temperature Status:", patient["temperature"])
+age_status = check_patient_status(patient["age"])
+temperature_status = check_temperature(patient["temperature"])
+
+print("Name:", patient["name"])
+print("Age Status:", age_status)
+print("Temperature Status:", temperature_status)
+
