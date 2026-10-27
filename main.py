@@ -10,4 +10,6 @@ patients = [
 # loop for
 for patient in patients:
     status = check_patient_status(patient["age"])
-    print(patient["name"], "-", status)
+
+    if status == "Invalid Age":
+        print(patient["name"], "-", status)
