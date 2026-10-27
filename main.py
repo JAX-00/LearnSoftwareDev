@@ -1,4 +1,4 @@
-from patient_utils import check_patient_status
+from patient_utils import check_patient_status, check_temperature
 
 patients = [
     {"name" : "Maria", "age" : 26, "temperature" : 38.5},
@@ -10,6 +10,7 @@ patients = [
 # loop for
 for patient in patients:
     status = check_patient_status(patient["age"])
+    temperature = check_temperature(patient["temperature"])
 
-    if status == "Invalid Age":
-        print(patient["name"], "-", status)
+    if status == "Adult" and temperature == "Fever":
+        print(patient["name"], "-", status, "-", temperature)

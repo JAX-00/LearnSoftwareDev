@@ -7,7 +7,7 @@ def check_patient_status(age):
 
 
 
-# def check_temperature(temperature):
-#     if temperature >= 37.5:
-#         return "Fever"
-#     return "Normal"
+def check_temperature(temperature):
+    if temperature >= 37.5:
+        return "Fever"
+    return "Normal"
