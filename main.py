@@ -7,10 +7,15 @@ patients = [
     {"name" : "David", "age": -2, "temperature": 39.5}
 ]
 
+adult_fever_patients = []
+
 # loop for
 for patient in patients:
-    status = check_patient_status(patient["age"])
-    temperature = check_temperature(patient["temperature"])
+    age_status = check_patient_status(patient["age"])
+    temperature_status = check_temperature(patient["temperature"])
 
-    if status == "Adult" and temperature == "Fever":
-        print(patient["name"], "-", status, "-", temperature)
+    if age_status == "Adult" and temperature_status == "Fever":
+        adult_fever_patients.append(patient["name"])
+        print(patient["name"], "-", age_status, "-", temperature_status)
+
+print(adult_fever_patients)
