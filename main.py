@@ -1,15 +1,13 @@
 from patient_utils import check_patient_status
 
-# patient = {
-#     "name" : "maria",
-#     "age" : check_patient_status(26),
-#     "temperature" : check_temperature(38.5)
-# }
-#
-# print("Name :", patient["name"])
-# print("Age Status :", patient["age"])
-# print("Temperature Status:", patient["temperature"])
+patients = [
+    {"name" : "Maria", "age" : 26, "temperature" : 38.5},
+{"name" : "John", "age" : 17, "temperature" : 36.5},
+{"name" : "Ana", "age" : 32, "temperature" : 37.2},
+    {"name" : "David", "age": -2, "temperature": 39.5}
+]
 
-print(check_patient_status(-5))
-print(check_patient_status(15))
-print(check_patient_status(26))
+# loop for
+for patient in patients:
+    status = check_patient_status(patient["age"])
+    print(patient["name"], "-", status)
