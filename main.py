@@ -9,6 +9,15 @@ patients = [
 
 adult_fever_patients = []
 
+# list comprehensive
+adult_patients = [
+    patient["name"]
+    for patient in patients
+    if check_patient_status(patient["age"])=="Adult"
+]
+
+print(adult_patients)
+
 # loop for
 for patient in patients:
     age_status = check_patient_status(patient["age"])
