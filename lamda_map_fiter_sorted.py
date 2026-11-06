@@ -33,3 +33,15 @@ result_ages_hl = sorted(ages, reverse=True)
 
 print(result_ages)
 print(result_ages_hl)
+
+# list of dictionary base on age patient
+patients = [
+    {"name": "Maria", "age": 26},
+{"name": "John", "age": 17},
+{"name": "Ana", "age": 32},
+]
+
+result_patient = sorted(patients, key=lambda patient: patient["age"])
+
+for patient in result_patient:
+    print(patient["name"], patient["age"])
